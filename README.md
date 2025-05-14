@@ -2,6 +2,9 @@
 
 A complete backend implementation of FakeStoreAPI with MongoDB persistence, built with Node.js, Express, and Mongoose.
 
+- https://fakestore-backend-wake.onrender.com/api/products
+- https://fakestore-backend-wake.onrender.com/api-docs/
+
 ## Features
 
 - **Full CRUD API** matching FakeStoreAPI endpoints
