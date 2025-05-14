@@ -44,8 +44,26 @@ beforeEach(async () => {
 describe('GET /api/products', () => {
     it('should return all products', async () => {
         const res = await request(app).get('/api/products');
-        expect(res.statusCode).toBe(200);
+        expect(res.status).toBe(200);
         expect(res.body.length).toBe(3);
+    });
+});
+
+
+describe('GET /api/products/category/:category', () => {
+    it('should return products by category', async () => {
+        const res = await request(app).get('/api/products/category/electronics');
+        expect(res.status).toBe(200);
+        expect(res.body.length).toBe(2);
+    });
+});
+
+describe('GET /api/products/categories', () => {
+    it('should return distinct categories', async () => {
+        const res = await request(app).get('/api/products/categories');
+        expect(res.status).toBe(200);
+        expect(res.body).toContain('electronics');
+        expect(res.body).toContain('clothing');
     });
 });
 
@@ -53,31 +71,12 @@ describe('GET /api/products/:id', () => {
     it('should return a single product by id', async () => {
         const productId = insertedProducts[0].id;
         const res = await request(app).get(`/api/products/${productId}`);
-        expect(res.statusCode).toBe(200);
+        expect(res.status).toBe(200);
         expect(res.body.title).toBe('Product 1');
     });
 
     it('should return 404 for non-existing product', async () => {
         const res = await request(app).get(`/api/products/999`);
-        expect(res.statusCode).toBe(404);
-    });
-
-
-});
-
-describe('GET /api/products/category/:category', () => {
-    it('should return products by category', async () => {
-        const res = await request(app).get('/api/products/category/electronics');
-        expect(res.statusCode).toBe(200);
-        expect(res.body.length).toBe(2);
-    });
-});
-
-describe('GET /api/products/categories/all', () => {
-    it('should return distinct categories', async () => {
-        const res = await request(app).get('/api/products/categories/all');
-        expect(res.statusCode).toBe(200);
-        expect(res.body).toContain('electronics');
-        expect(res.body).toContain('clothing');
+        expect(res.status).toBe(404);
     });
 });
