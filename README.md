@@ -39,12 +39,12 @@ npm test (test mode)
 
 ## Project structure
 
-├── models/           # MongoDB models
-├── routes/           # API route handlers
-├── scripts/          # Database scripts
-├── tests/            # Test cases
-├── server.js         # Main application entry
-└── package.json
+## ├── models/           # MongoDB models
+## ├── routes/           # API route handlers
+## ├── scripts/          # Database scripts
+## ├── tests/            # Test cases
+## ├── server.js         # Main application entry
+## ├── package.json
 
 ## Technologies used
 
