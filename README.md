@@ -28,30 +28,30 @@ A complete backend implementation of FakeStoreAPI with MongoDB persistence, buil
 ## Installation && run project
 
 1. Clone the repository:
-   git clone https://github.com/Vikesh115/fakestore-backend.git
-   cd fakestore-backend
+ - git clone https://github.com/Vikesh115/fakestore-backend.git
+ - cd fakestore-backend
 
-npm install (install dependencies)
-npm run populate (populate database)
-npm run dev (development mode with hot reload)
-npm start (production mode)
-npm test (test mode)
+ - npm install (install dependencies)
+ - npm run populate (populate database)
+ - npm run dev (development mode with hot reload)
+ - npm start (production mode)
+ - npm test (test mode)
 
 ## Project structure
 
-## ├── models/           # MongoDB models
-## ├── routes/           # API route handlers
-## ├── scripts/          # Database scripts
-## ├── tests/            # Test cases
-## ├── server.js         # Main application entry
-## ├── package.json
+ - ├── models/           # MongoDB models
+ - ├── routes/           # API route handlers
+ - ├── scripts/          # Database scripts
+ - ├── tests/            # Test cases
+ - ├── server.js         # Main application entry
+ - ├── package.json
 
 ## Technologies used
 
-Backend: Node.js, Express
-Database: MongoDB, Mongoose
-Testing: Jest, Superset
-Dev Tools: Nodemon
+ - Backend: Node.js, Express
+ - Database: MongoDB, Mongoose
+ - Testing: Jest, Superset
+ - Dev Tools: Nodemon
 
 ## Author
 
