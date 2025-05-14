@@ -29,7 +29,7 @@ const options = {
                 description: 'Development server',
             },
             {
-                url: 'https://your-production-api.com', // Replace with your actual production URL
+                url: 'https://fakestore-backend-wake.onrender.com/', // Replace with your actual production URL
                 description: 'Production server',
             },
         ],
